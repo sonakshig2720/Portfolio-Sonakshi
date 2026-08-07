@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonakshi Godavarthy — AI &amp; Cloud Engineer</title>
+<meta name="description" content="Sonakshi Godavarthy — AI &amp; Cloud Engineer specializing in Generative AI, RAG, Knowledge Graphs, and cloud-based machine learning solutions.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container">
+    <a href="#home" class="nav-logo">Sonakshi<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active-link">Home</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li class="nav-cv"><a href="assets/Sonakshi_Godavarthy_CV.pdf" download class="btn btn-small btn-primary">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow-row">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>Available for AI Engineering roles</p>
+        <p class="eyebrow">📍 Hamburg, Germany (open to relocate)</p>
+      </div>
+      <h1>Sonakshi Godavarthy</h1>
+      <p class="hero-role">
+        <span class="type-target" id="typeTarget"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-desc">
+        M.Sc. Data Science candidate building <strong>Generative AI</strong>, <strong>RAG</strong>, and
+        <strong>Knowledge Graph</strong> systems — from ontology-grounded retrieval pipelines at DLR to
+        production-style ML applications on AWS and Azure. I turn unstructured, messy data into
+        systems that retrieve, reason, and explain.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Generative AI</span>
+        <span class="tag">RAG</span>
+        <span class="tag">Knowledge Graphs</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Data Engineering</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#experience" class="btn btn-ghost">View Experience</a>
+        <a href="assets/Sonakshi_Godavarthy_CV.pdf" download class="btn btn-ghost">Download CV</a>
+        <a href="#contact" class="btn btn-text">Contact Me →</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/sonakshi-godavarthy-0685181b6/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://github.com/sonakshig2720" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.65.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.35c.85 0 1.71.12 2.5.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2z"/></svg>
+        </a>
+        <a href="mailto:godavarthysonakshi@gmail.com" aria-label="Email" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.47a.9.9 0 0 0 1 0L19.8 6H4.2zM20 7.8l-6.9 5.17a2.9 2.9 0 0 1-3.2 0L4 7.8V18h16V7.8z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="portrait-frame">
+        <div class="portrait-glow"></div>
+        <img src="assets/profile.jpg" alt="Sonakshi Godavarthy" class="portrait-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span></span></div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section about">
+  <div class="container">
+    <p class="section-kicker">01 — About</p>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm an M.Sc. Data Science candidate at Hamburg University of Technology (TUHH), currently
+          writing my Master's thesis at the <strong>German Aerospace Center (DLR)</strong> on
+          ontology-grounded Knowledge Graph-RAG pipelines for aircraft maintenance documentation.
+        </p>
+        <p>
+          Over the past two years I've moved across the AI stack — fine-tuning transformer models and
+          building RAG pipelines, generating and validating large volumes of synthetic tabular data, and
+          designing the systems that turn messy, technical data into something explainable, not just
+          accurate.
+        </p>
+        <p>
+          I'm looking for full-time roles as an <strong>AI / Generative AI / Applied AI Engineer</strong>,
+          <strong>Cloud AI Engineer</strong>, or <strong>Machine Learning / Data Science Engineer</strong> —
+          building systems that combine retrieval, reasoning, and real-world data infrastructure.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Industry &amp; research roles</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-focus reveal">
+        <div class="focus-card">
+          <h3>Currently</h3>
+          <p>Master's Thesis Student, <strong>DLR</strong> — Knowledge Graph-RAG for A320 maintenance documents</p>
+        </div>
+        <div class="focus-card">
+          <h3>Based in</h3>
+          <p>Hamburg, Germany</p>
+        </div>
+        <div class="focus-card">
+          <h3>Focus areas</h3>
+          <p>Generative AI &amp; RAG · Knowledge Graphs · Applied ML · Cloud AI Systems · Data Engineering</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <div class="container">
+    <p class="section-kicker">02 — Career</p>
+    <h2 class="section-title reveal">Professional Experience</h2>
+    <p class="section-sub reveal">A path built one deployable system at a time — each role trading a new kind of complexity for a sharper instinct on what actually ships.</p>
+
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div>
+              <h3>Master's Thesis Student</h3>
+              <p class="tl-org">Deutsches Zentrum für Luft- und Raumfahrt (DLR)</p>
+            </div>
+            <span class="tl-date">Apr 2026 – Present · Hamburg, Germany</span>
+          </div>
+          <ul>
+            <li>Building an ontology-grounded information extraction pipeline and KG-RAG to structure aircraft components, procedures and relationships for accurate maintenance knowledge retrieval.</li>
+            <li>Developing a Knowledge Graph-grounded RAG pipeline for Airbus A320 maintenance documents, integrating text, tables, equations, flowcharts and technical diagrams from SGML sources.</li>
+            <li>Investigating scalable storage and retrieval architectures to support maintenance knowledge access and process analysis.</li>
+          </ul>
+          <div class="tl-tags"><span>Knowledge Graphs</span><span>RAG</span><span>Ontologies</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div>
+              <h3>Intern — eLearning and Artificial Intelligence</h3>
+              <p class="tl-org">Lufthansa Technical Training GmbH</p>
+            </div>
+            <span class="tl-date">Nov 2025 – Mar 2026 · Hamburg, Germany</span>
+          </div>
+          <ul>
+            <li>Researched and built functional prototypes of a RAG-based document-processing pipeline supporting summarisation, question generation, information retrieval and learner assistance.</li>
+            <li>Designed solution architectures using DistilBART-CNN for summarisation, all-MiniLM-L6-v2 for semantic retrieval, and GPT-4 for question generation and learner support.</li>
+            <li>Studied and defined evaluation frameworks using ROUGE and Precision@K metrics to measure accuracy and retrieval relevance.</li>
+          </ul>
+          <div class="tl-tags"><span>RAG</span><span>LLMs</span><span>Evaluation</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div>
+              <h3>Research Assistant — GenAI Incubator</h3>
+              <p class="tl-org">Fraunhofer Institute for Mechatronic Systems Design</p>
+            </div>
+            <span class="tl-date">Jan 2025 – Aug 2025 · Paderborn, Germany</span>
+          </div>
+          <ul>
+            <li>Developed and compared synthetic tabular-data generation methods using GPT-4 Turbo, SDV, custom PyTorch diffusion models, denoising MLPs and rule-based techniques — generating 15,000+ synthetic records.</li>
+            <li>Integrated methods into an automated pipeline analysing dataset columns, generating structured synthetic data and component descriptions.</li>
+            <li>Validated synthetic-data quality via schema checks, statistical comparisons and outlier detection — 98% of generated records passed validation.</li>
+            <li>Designed the interface in Figma and implemented it as a React web application for interactive dataset upload and synthetic data generation.</li>
+          </ul>
+          <div class="tl-tags"><span>Generative AI</span><span>PyTorch</span><span>React</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div>
+              <h3>Student Assistant</h3>
+              <p class="tl-org">Institute of Data Science Foundations (TUHH)</p>
+            </div>
+            <span class="tl-date">Feb 2025 – Jul 2025 · Hamburg, Germany</span>
+          </div>
+          <ul>
+            <li>Analysed EuXFEL laboratory data to investigate mismatches between physics-based simulations and experimental particle-beam measurements.</li>
+            <li>Built a Python workflow comparing 189 real vs. 189 API-generated simulation results using error analysis, heatmaps and t-SNE; 88.9% met the defined error threshold.</li>
+            <li>Investigated high-error cases and traced 86% of them to the same measurement date, pointing to experiment-specific data-quality issues.</li>
+          </ul>
+          <div class="tl-tags"><span>Data Analysis</span><span>Python</span><span>t-SNE</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div>
+              <h3>Associate Software Engineer — Global Customer Support</h3>
+              <p class="tl-org">Informatica</p>
+            </div>
+            <span class="tl-date">Jul 2022 – Sep 2023 · Bangalore, India</span>
+          </div>
+          <ul>
+            <li>Resolved complex Informatica Cloud integration and connector issues, achieving a 95% customer satisfaction rate.</li>
+            <li>Optimised ETL workflows across multiple database connectors, improving data pipeline efficiency and reliability.</li>
+            <li>Developed technical workarounds for ~90% of assigned cases and authored reusable knowledge articles.</li>
+          </ul>
+          <div class="tl-tags"><span>ETL</span><span>Cloud Integration</span><span>SQL</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div>
+              <h3>Intern — Global Customer Support</h3>
+              <p class="tl-org">Informatica</p>
+            </div>
+            <span class="tl-date">Aug 2021 – Jun 2022 · Bangalore, India</span>
+          </div>
+          <ul>
+            <li>Completed technical training in Informatica Intelligent Cloud Services (IICS); worked with flat-file, Oracle, MySQL, PostgreSQL and Snowflake connectors.</li>
+            <li>Collaborated with senior engineers to prioritise and resolve customer issues, improving response times by 20%.</li>
+          </ul>
+          <div class="tl-tags"><span>IICS</span><span>Data Integration</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <p class="section-kicker">03 — Work</p>
+    <h2 class="section-title reveal">Projects</h2>
+    <p class="section-sub reveal">Ideas taken past the notebook — built, broken, and rebuilt until the pipeline actually holds up.</p>
+
+    <div class="project-grid">
+
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-icon">🤖</span>
+          <span class="project-date">Apr 2025 – Sep 2025</span>
+        </div>
+        <h3>Human-Centered AI Applications</h3>
+        <p>A collection of applied AI systems: a Django AutoML app, a TF-IDF + Logistic Regression sentiment classifier (89.8% accuracy on 50k IMDB reviews) with active learning, an explainable-AI interface using counterfactuals, an SVD-based movie recommender, and a PyTorch RLHF pipeline with a Bradley–Terry reward model.</p>
+        <div class="project-tags">
+          <span>PyTorch</span><span>Django</span><span>RLHF</span><span>Explainable AI</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-icon">🕸️</span>
+          <span class="project-date">Oct 2024 – Jul 2025</span>
+        </div>
+        <h3>Concept Drift in Hierarchical Federated Networks</h3>
+        <p>Investigated how Hierarchical Federated Learning maintains accuracy under concept drift and client dropout. Built a PyTorch/CNN framework on non-IID MNIST, evaluating FedAvg, FedProx, FedNova and hybrid aggregation under 40% client dropout — hybrid aggregation showed the strongest recovery.</p>
+        <div class="project-tags">
+          <span>Federated Learning</span><span>PyTorch</span><span>Research</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-icon">🛡️</span>
+          <span class="project-date">Aug 2024</span>
+        </div>
+        <h3>Vulnerability Prediction Model</h3>
+        <p>Mined and labeled vulnerability data to train CNN-based detection models, then built ML pipelines to analyse results against performance metrics for reliable vulnerability prediction.</p>
+        <div class="project-tags">
+          <span>CNN</span><span>Security</span><span>Machine Learning</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-icon">🎬</span>
+          <span class="project-date">Aug 2024</span>
+        </div>
+        <h3>YouTube Transcript Summarisation</h3>
+        <p>An automated video summarisation pipeline using fine-tuned DistilBART-CNN models to generate concise summaries from YouTube transcripts, cutting content review time by 60% through integrated NLP preprocessing.</p>
+        <div class="project-tags">
+          <span>NLP</span><span>Transformers</span><span>Automation</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-icon">🚦</span>
+          <span class="project-date">Apr 2024 – Aug 2024</span>
+        </div>
+        <h3>Real-Time Traffic Monitoring</h3>
+        <p>A scalable streaming data pipeline processing sensor data in real time with Kafka and Flink, powering structured fleet monitoring dashboards with custom operators for speed, distance and performance metrics, visualised in Streamlit.</p>
+        <div class="project-tags">
+          <span>Kafka</span><span>Flink</span><span>Streamlit</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-icon">🫁</span>
+          <span class="project-date">Aug 2021 – May 2022</span>
+        </div>
+        <h3>COVID-19 Detection &amp; Severity from Chest X-Rays</h3>
+        <p>Built a CNN-based deep learning system to detect COVID-19 and assess its severity from chest X-rays, reaching 92% accuracy. Applied image-processing augmentation and architecture fine-tuning to improve robustness and reduce overfitting.</p>
+        <div class="project-tags">
+          <span>CNN</span><span>Computer Vision</span><span>Healthcare AI</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <p class="section-kicker">04 — Toolbox</p>
+    <h2 class="section-title reveal">Technical Skills</h2>
+    <p class="section-sub reveal">Core tools and technologies across generative AI, machine learning, cloud, and data engineering.</p>
+
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-head"><span class="skill-icon">✨</span><h3>Generative AI &amp; Retrieval</h3></div>
+        <div class="chip-row">
+          <span class="chip">RAG</span><span class="chip">KG-RAG</span><span class="chip">Prompt Engineering</span>
+          <span class="chip">LLM Applications</span><span class="chip">Hugging Face Transformers</span>
+          <span class="chip">Embeddings</span><span class="chip">Semantic Search</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head"><span class="skill-icon">🕸️</span><h3>Knowledge Graphs</h3></div>
+        <div class="chip-row">
+          <span class="chip">Neo4j</span><span class="chip">RDF / OWL</span><span class="chip">Ontologies</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head"><span class="skill-icon">🧮</span><h3>AI / ML &amp; Computer Vision</h3></div>
+        <div class="chip-row">
+          <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span>
+          <span class="chip">OpenCV</span><span class="chip">Active Learning</span><span class="chip">Federated Learning</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head"><span class="skill-icon">☁️</span><h3>Cloud, APIs &amp; Dev Tools</h3></div>
+        <div class="chip-row">
+          <span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Docker</span>
+          <span class="chip">REST APIs</span><span class="chip">HTTP</span><span class="chip">Linux</span>
+          <span class="chip">Git / GitHub</span><span class="chip">FastAPI</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head"><span class="skill-icon">🗄️</span><h3>Databases &amp; Data Engineering</h3></div>
+        <div class="chip-row">
+          <span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">Oracle</span>
+          <span class="chip">Snowflake</span><span class="chip">Neo4j</span><span class="chip">Informatica Cloud</span>
+          <span class="chip">Kafka</span><span class="chip">Flink</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head"><span class="skill-icon">📊</span><h3>Programming &amp; Data</h3></div>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Java</span>
+          <span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span>
+          <span class="chip">Seaborn</span><span class="chip">Power BI</span><span class="chip">Tableau</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head"><span class="skill-icon">🛠️</span><h3>Application Development</h3></div>
+        <div class="chip-row">
+          <span class="chip">FastAPI</span><span class="chip">Django</span><span class="chip">React</span><span class="chip">Streamlit</span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="section">
+  <div class="container">
+    <p class="section-kicker">05 — Academics</p>
+    <h2 class="section-title reveal">Education</h2>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-badge">M.Sc.</div>
+        <h3>Data Science</h3>
+        <p class="edu-org">Hamburg University of Technology (TUHH)</p>
+        <p class="edu-meta">Oct 2023 – Dec 2026 (expected) · Hamburg, Germany</p>
+        <p class="edu-grade">Current grade: <strong>1.9 / 5.0</strong> <span>(German scale — 1.0 highest)</span></p>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-badge">B.Tech.</div>
+        <h3>Computer Science &amp; Engineering</h3>
+        <p class="edu-org">CMR College of Engineering &amp; Technology</p>
+        <p class="edu-meta">Jun 2018 – May 2022 · Hyderabad, India</p>
+        <p class="edu-grade">GPA: <strong>8.87 / 10</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section id="achievements" class="section achievements-section">
+  <div class="container">
+    <p class="section-kicker">06 — Recognition</p>
+    <h2 class="section-title reveal">Scholarship</h2>
+
+    <div class="achieve-grid">
+      <div class="achieve-card reveal">
+        <span class="achieve-icon">🏅</span>
+        <div>
+          <h3>Merit Scholarship for International Students</h3>
+          <p class="edu-org">Hamburg University of Technology (TUHH) · Aug 2025</p>
+          <p>Awarded for academic excellence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="contact-card reveal">
+      <p class="section-kicker light">07 — Get in touch</p>
+      <h2 class="section-title">Let's build something<br>worth retrieving.</h2>
+      <p class="contact-sub">Open to AI Engineer, Generative AI Engineer, Applied AI Engineer, Cloud AI Engineer, Machine Learning Engineer, and Data Science / Data Analysis roles.</p>
+
+      <div class="contact-grid">
+        <a href="mailto:godavarthysonakshi@gmail.com" class="contact-item">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.47a.9.9 0 0 0 1 0L19.8 6H4.2zM20 7.8l-6.9 5.17a2.9 2.9 0 0 1-3.2 0L4 7.8V18h16V7.8z"/></svg></span>
+          <div><strong>Email</strong><small>godavarthysonakshi@gmail.com</small></div>
+        </a>
+        <a href="https://www.linkedin.com/in/sonakshi-godavarthy-0685181b6/" target="_blank" rel="noopener" class="contact-item">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
+          <div><strong>LinkedIn</strong><small>/in/sonakshi-godavarthy</small></div>
+        </a>
+        <a href="https://github.com/sonakshig2720" target="_blank" rel="noopener" class="contact-item">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.65.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.35c.85 0 1.71.12 2.5.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2z"/></svg></span>
+          <div><strong>GitHub</strong><small>/sonakshig2720</small></div>
+        </a>
+        <a href="tel:+4915158800396" class="contact-item">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg></span>
+          <div><strong>Phone</strong><small>+49 15158 800396</small></div>
+        </a>
+      </div>
+
+      <p class="contact-location">📍 Hamburg, Germany</p>
+
+      <a href="assets/Sonakshi_Godavarthy_CV.pdf" download class="btn btn-primary btn-large">Download Full CV</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Sonakshi Godavarthy. Built with intent, not a template.</p>
+    <a href="#home" class="footer-top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
