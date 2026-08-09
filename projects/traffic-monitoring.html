@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-Time Traffic Monitoring — Sonakshi Godavarthy</title>
+<meta name="description" content="A real-time streaming data pipeline for fleet monitoring, built with Kafka, Flink and Streamlit.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container">
+    <a href="../index.html#home" class="nav-logo">Sonakshi<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#home" class="nav-link">Home</a></li>
+      <li><a href="../index.html#work" class="nav-link">Work</a></li>
+      <li><a href="../index.html#research" class="nav-link">Research</a></li>
+      <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+      <li><a href="../index.html#about" class="nav-link">About</a></li>
+      <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      <li class="nav-cv"><a href="../assets/Sonakshi_Godavarthy_CV.pdf" download class="btn btn-small btn-primary">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="section project-page">
+  <div class="container">
+    <a href="../index.html#work" class="back-link">← Back to Selected Work</a>
+
+    <p class="section-kicker">03 — Selected Work</p>
+    <h1 class="project-page-title">Real-Time Traffic Monitoring</h1>
+    <p class="project-page-subtitle">Streaming Fleet Intelligence with Kafka &amp; Flink</p>
+    <div class="project-page-tags">
+      <span>Kafka</span><span>Flink</span><span>Streamlit</span><span>Real-Time Data Engineering</span>
+    </div>
+
+    <div class="project-page-body">
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>Built a scalable streaming data pipeline to process live vehicle sensor data in real time using Kafka and Flink, powering structured fleet-monitoring dashboards.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Problem</h2>
+        <p>Fleet operators need to see vehicle speed, distance and performance as it happens — not in a nightly batch report. Getting that kind of point-in-time visibility usually means standing up dedicated streaming infrastructure rather than adapting existing batch pipelines.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Approach</h2>
+        <p>Sensor data is ingested through Kafka and processed with Flink using custom stream-processing operators that compute vehicle speed, distance and performance metrics as events arrive. The processed stream feeds a real-time interface built in Streamlit, giving a live view of fleet status and alerts.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>System / Architecture</h2>
+        <div class="pipeline-diagram pipeline-diagram-wide">
+          <div class="pipeline-step">
+            <strong>Data Provider</strong>
+            <span>Docker · Streaming source</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <strong>Kafka</strong>
+            <span>Message queue / ingestion</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-group">
+            <span class="pipeline-group-label">Kubernetes Engine</span>
+            <div class="pipeline-step">
+              <strong>Apache Flink</strong>
+              <span>Stream processing</span>
+            </div>
+            <div class="pipeline-arrow">↓</div>
+            <div class="pipeline-step">
+              <strong>Redis</strong>
+              <span>State / cache</span>
+            </div>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step pipeline-step-end">
+            <strong>Streamlit</strong>
+            <span>Live monitoring dashboard</span>
+          </div>
+          <p class="pipeline-note">Deployed via Cloud Run</p>
+        </div>
+        <video class="work-video work-video-page" controls playsinline preload="metadata">
+          <source src="../assets/videos/traffic-monitoring-demo.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="project-section">
+        <h2>My Contribution</h2>
+        <p>This was built as part of a 4-person team project. My contributions:</p>
+        <ul class="project-list">
+          <li>Configured the initial Kafka setup locally.</li>
+          <li>Computed taxi speed and distance using the Haversine formula, aggregated by taxi ID.</li>
+          <li>Created the Docker image for the data provider.</li>
+          <li>Handled exceptions in Flink and established its connections with Kafka and Redis.</li>
+          <li>Contributed to the planning and setup of the Streamlit interface.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Technologies</h2>
+        <div class="project-page-tags">
+          <span>Kafka</span><span>Flink</span><span>Streamlit</span><span>Python</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Results</h2>
+        <p>Delivered a working real-time fleet-monitoring dashboard, surfacing live vehicle speed, distance and performance metrics as sensor data streamed in.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Challenges / Learnings</h2>
+        <p>Designing stream-processing operators that stay correct under out-of-order or late-arriving sensor events was a recurring challenge, as was balancing processing latency against dashboard responsiveness in a genuinely real-time pipeline.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Links</h2>
+        <a href="https://github.com/sonakshig2720/Real-time-Traffic-Monitoring" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">Sonakshi Godavarthy</p>
+      <p class="footer-tagline">AI Researcher · Knowledge Graphs · RAG · Multimodal AI</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/sonakshig2720" target="_blank" rel="noopener">GitHub</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/sonakshi-godavarthy-0685181b6/" target="_blank" rel="noopener">LinkedIn</a>
+      <span>·</span>
+      <a href="mailto:godavarthysonakshi@gmail.com">Email</a>
+    </div>
+    <p class="footer-year">© <span id="year"></span></p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

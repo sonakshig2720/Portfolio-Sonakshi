@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept Drift in Hierarchical Federated Learning — Sonakshi Godavarthy</title>
+<meta name="description" content="Investigating aggregation strategy robustness under concept drift and client dropout in hierarchical federated learning.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container">
+    <a href="../index.html#home" class="nav-logo">Sonakshi<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#home" class="nav-link">Home</a></li>
+      <li><a href="../index.html#work" class="nav-link">Work</a></li>
+      <li><a href="../index.html#research" class="nav-link">Research</a></li>
+      <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+      <li><a href="../index.html#about" class="nav-link">About</a></li>
+      <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      <li class="nav-cv"><a href="../assets/Sonakshi_Godavarthy_CV.pdf" download class="btn btn-small btn-primary">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="section project-page">
+  <div class="container">
+    <a href="../index.html#work" class="back-link">← Back to Selected Work</a>
+
+    <p class="section-kicker">02 — Selected Work</p>
+    <h1 class="project-page-title">Concept Drift in Hierarchical Federated Learning</h1>
+    <p class="project-page-subtitle">Robustness of aggregation strategies under drift and client dropout</p>
+    <div class="project-page-tags">
+      <span>Federated Learning</span><span>PyTorch</span><span>Research</span><span>Non-IID Data</span>
+    </div>
+
+    <div class="project-metrics-row">
+      <div class="metric"><span class="metric-num">40%</span><span class="metric-label">Client dropout evaluated</span></div>
+      <div class="metric"><span class="metric-num">4</span><span class="metric-label">Aggregation strategies compared</span></div>
+    </div>
+
+    <div class="project-page-body">
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>Investigated how Hierarchical Federated Learning systems maintain accuracy when client data distributions change over time (concept drift) and clients become unavailable — a common but under-tested condition for real-world federated deployments.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Problem</h2>
+        <p>Federated systems must keep learning as client data shifts over time and clients drop in and out of training. Most aggregation strategies are evaluated under stable, fully-available conditions — leaving it unclear how they behave once the data and the client population stop being reliable.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Approach</h2>
+        <p>Built a PyTorch/CNN framework on non-IID MNIST and evaluated FedAvg, FedProx, FedNova and a hybrid aggregation strategy under synchronous, gradual and abrupt concept drift, combined with up to 40% client dropout. The framework simulates realistic drift patterns and client unavailability to compare how each aggregation strategy recovers.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>System / Architecture</h2>
+        <div class="pipeline-diagram pipeline-diagram-wide">
+          <div class="pipeline-step">
+            <strong>MNIST Dataset</strong>
+            <span>60K train + 10K test images</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <strong>Data Preparation</strong>
+            <span>Tensor conversion · Normalization · Client partitioning</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <strong>Concept Drift Module</strong>
+            <span>No drift · Synchronous · Gradual · Abrupt</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <strong>Client Layer</strong>
+            <span>12–24 clients · Local CNN training · Up to 40% dropout</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-branch">
+            <div class="pipeline-branch-col">
+              <span class="pipeline-branch-label">3-Level</span>
+              <span>12 Clients → 4 Edge → 2 Intermediate → 1 Global</span>
+            </div>
+            <div class="pipeline-branch-col">
+              <span class="pipeline-branch-label">4-Level</span>
+              <span>24 Clients → 8 Edge → 4 Intermediate → 2 → 1 Global</span>
+            </div>
+          </div>
+          <p class="pipeline-note">Aggregation at each server layer: FedAvg · FedProx · FedNova · Hybrid</p>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <strong>Global CNN Model</strong>
+            <span>Updated every round · 20 rounds</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step pipeline-step-end">
+            <strong>Performance Evaluation</strong>
+            <span>Accuracy · Drop magnitude · Recovery round · Recovery rate</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>My Contribution</h2>
+        <p>I designed the experimental framework and the drift/dropout simulation, implemented and compared all four aggregation strategies, and analysed recovery behaviour across drift scenarios.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Technologies</h2>
+        <div class="project-page-tags">
+          <span>PyTorch</span><span>CNNs</span><span>Federated Learning</span><span>Non-IID MNIST</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Results</h2>
+        <p>FedProx and FedNova adapted more effectively to concept drift than standard FedAvg, while the hybrid aggregation strategy achieved the strongest recovery in client-dropout scenarios.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Challenges / Learnings</h2>
+        <p>Simulating realistic concept drift and dropout patterns — rather than synthetic worst cases — was necessary to get meaningful comparisons. Disentangling the separate effects of drift versus dropout on each aggregation strategy required careful experiment design.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Links</h2>
+        <a href="https://github.com/sonakshig2720/Hierarchical_Federated_Learning" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">Sonakshi Godavarthy</p>
+      <p class="footer-tagline">AI Researcher · Knowledge Graphs · RAG · Multimodal AI</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/sonakshig2720" target="_blank" rel="noopener">GitHub</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/sonakshi-godavarthy-0685181b6/" target="_blank" rel="noopener">LinkedIn</a>
+      <span>·</span>
+      <a href="mailto:godavarthysonakshi@gmail.com">Email</a>
+    </div>
+    <p class="footer-year">© <span id="year"></span></p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

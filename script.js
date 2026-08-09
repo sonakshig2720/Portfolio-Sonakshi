@@ -24,7 +24,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 // ===== Active nav link on scroll =====
-const sections = ['home', 'experience', 'projects', 'skills', 'education', 'contact']
+const sections = ['home', 'work', 'research', 'experience', 'about', 'contact']
   .map(id => document.getElementById(id))
   .filter(Boolean);
 const navAnchors = document.querySelectorAll('.nav-link');
@@ -54,45 +54,3 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 revealEls.forEach(el => revealObserver.observe(el));
-
-// ===== Hero typing effect =====
-const typeTarget = document.getElementById('typeTarget');
-const phrases = [
-  'AI & Cloud Engineer',
-  'Generative AI · RAG Systems',
-  'Knowledge Graph Engineering',
-  'Applied Machine Learning'
-];
-
-if (typeTarget && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  let phraseIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
-
-  const tick = () => {
-    const current = phrases[phraseIndex];
-    if (!deleting) {
-      charIndex++;
-      typeTarget.textContent = current.slice(0, charIndex);
-      if (charIndex === current.length) {
-        deleting = true;
-        setTimeout(tick, 1600);
-        return;
-      }
-      setTimeout(tick, 55);
-    } else {
-      charIndex--;
-      typeTarget.textContent = current.slice(0, charIndex);
-      if (charIndex === 0) {
-        deleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        setTimeout(tick, 300);
-        return;
-      }
-      setTimeout(tick, 30);
-    }
-  };
-  tick();
-} else if (typeTarget) {
-  typeTarget.textContent = phrases[0];
-}
