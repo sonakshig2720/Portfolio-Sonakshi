@@ -424,12 +424,13 @@ body::before {
 .metric { display: flex; flex-direction: column; }
 .metric-num {
   font-family: var(--font-mono);
-  font-size: 1.7rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: var(--accent);
   line-height: 1.1;
+  letter-spacing: -0.02em;
 }
-.metric-label { font-size: 0.78rem; color: var(--text-faint); margin-top: 2px; }
+.metric-label { font-size: 0.78rem; color: var(--text-faint); margin-top: 3px; }
 
 .work-link {
   display: inline-flex;
@@ -632,6 +633,15 @@ a.archive-row:hover { background: var(--surface); }
   line-height: 1.5;
   margin-bottom: 32px;
 }
+.research-tags-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+}
 .research-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
 .research-note { color: var(--text-faint); font-size: 0.92rem; }
 .research-note a { color: var(--accent); font-weight: 600; }
@@ -668,20 +678,23 @@ a.archive-row:hover { background: var(--surface); }
 
 /* ============ TECHNICAL EXPERTISE ============ */
 .expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 .expertise-card {
+  flex: 0 1 calc((100% - 40px) / 3);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 24px;
+  text-align: center;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 .expertise-card:hover { transform: translateY(-3px); border-color: var(--border-light); }
 .expertise-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; }
-.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .chip {
   font-size: 0.8rem;
   color: var(--text-dim);
@@ -899,7 +912,7 @@ a.archive-row:hover { background: var(--surface); }
   .portrait-frame { width: min(280px, 60vw); margin: 0 auto; }
   .work-card, .work-card-reverse { grid-template-columns: 1fr; gap: 28px; }
   .work-card-reverse .work-main, .work-card-reverse .work-visual { order: initial; }
-  .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+  .expertise-card { flex-basis: calc((100% - 20px) / 2); }
   .contact-grid { grid-template-columns: repeat(3, 1fr); }
   .archive-row { grid-template-columns: 1.4fr 1fr 1.4fr; }
   .archive-year { display: none; }
@@ -938,7 +951,7 @@ a.archive-row:hover { background: var(--surface); }
   .hero-actions .btn, .hero-actions a { width: 100%; text-align: center; }
   .hero-socials { justify-content: center; }
 
-  .expertise-grid { grid-template-columns: 1fr; }
+  .expertise-card { flex-basis: 100%; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-card { padding: 40px 24px; }
 
