@@ -59,7 +59,7 @@
 
       <div class="project-section">
         <h2>Problem</h2>
-        <p>Federated systems must keep learning as client data shifts over time and clients drop in and out of training. Most aggregation strategies are evaluated under stable, fully-available conditions — leaving it unclear how they behave once the data and the client population stop being reliable.</p>
+        <p>Federated systems must keep learning as client data shifts over time and clients lose connection in between rounds of training. Most aggregation strategies are evaluated under stable, fully-available conditions — leaving it unclear how they behave once the data and the client population stop being reliable.</p>
       </div>
 
       <div class="project-section">
@@ -133,7 +133,15 @@
 
       <div class="project-section">
         <h2>Challenges / Learnings</h2>
-        <p>Simulating realistic concept drift and dropout patterns — rather than synthetic worst cases — was necessary to get meaningful comparisons. Disentangling the separate effects of drift versus dropout on each aggregation strategy required careful experiment design.</p>
+        <ul class="project-list">
+          <li>Simulating and evaluating synchronous/asynchronous, gradual, and abrupt concept drift across clients.</li>
+          <li>Understanding how hierarchical aggregation and client topology affect convergence and model performance.</li>
+          <li>Comparing FedAvg, FedProx, and FedNova under heterogeneous and drifting environments.</li>
+          <li>Designing a hybrid aggregation strategy to improve robustness against client dropout and concept drift.</li>
+          <li>Analyzing recovery metrics to quantify the impact of drift and dropout on model accuracy and convergence.</li>
+          <li>Gained practical experience in designing robust federated learning experiments and analyzing distributed model behavior.</li>
+          <li>Learned to implement and evaluate federated learning algorithms in PyTorch, including handling non-IID data distributions and client dropout scenarios.</li>
+        </ul>
       </div>
 
       <div class="project-section">
