@@ -111,30 +111,19 @@
             maintenance queries.
           </p>
           <p class="work-contribution"><span>Key contribution</span> Designing the ontology and building the KG-RAG pipeline end-to-end, from extraction to grounded retrieval for multimodal information.</p>
+        </div>
+        <div class="work-side">
           <div class="work-tags">
             <span>Knowledge Graphs</span><span>Ontologies · RDF/OWL</span><span>Neo4j</span><span>RAG / KG-RAG</span><span>LLMs</span>
           </div>
-          <a href="projects/aircraft-maintenance-kg.html" class="work-link">Explore Project →</a>
-        </div>
-        <div class="work-visual">
-          <div class="pipeline-diagram">
-            <div class="pipeline-step">SGML / Documents</div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">Information Extraction</div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">Ontology Mapping</div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">Knowledge Graph</div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">KG-RAG</div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step pipeline-step-end">Maintenance Query</div>
+          <div class="work-links">
+            <a href="projects/aircraft-maintenance-kg.html" class="work-link">Explore Project →</a>
           </div>
         </div>
       </article>
 
       <!-- PROJECT 02 — Federated Learning -->
-      <article class="work-card work-card-reverse reveal">
+      <article class="work-card reveal">
         <div class="work-main">
           <span class="work-num">02</span>
           <h3 class="work-title">Concept Drift in Hierarchical Federated Learning</h3>
@@ -145,6 +134,8 @@
             learning, comparing FedAvg, FedProx, FedNova and a hybrid aggregation strategy.
           </p>
           <p class="work-contribution"><span>Key contribution</span> Designed the experimental framework and drift/dropout simulation, and implemented and compared all four aggregation strategies for hierarchical networks.</p>
+        </div>
+        <div class="work-side">
           <div class="work-tags">
             <span>Federated Learning</span><span>PyTorch</span><span>Non-IID Data</span>
           </div>
@@ -152,52 +143,9 @@
             <div class="metric"><span class="metric-num">40%</span><span class="metric-label">Client dropout evaluated</span></div>
             <div class="metric"><span class="metric-num">4</span><span class="metric-label">Aggregation strategies compared</span></div>
           </div>
-          <a href="projects/federated-learning.html" class="work-link">Explore Project →</a>
-          <a href="https://github.com/sonakshig2720/Hierarchical_Federated_Learning" target="_blank" rel="noopener" class="work-link work-link-secondary">GitHub →</a>
-        </div>
-        <div class="work-visual">
-          <div class="pipeline-diagram pipeline-diagram-wide">
-            <div class="pipeline-step">
-              <strong>MNIST Dataset</strong>
-              <span>60K train + 10K test images</span>
-            </div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">
-              <strong>Data Preparation</strong>
-              <span>Tensor conversion · Normalization · Client partitioning</span>
-            </div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">
-              <strong>Concept Drift Module</strong>
-              <span>No drift · Synchronous · Gradual · Abrupt</span>
-            </div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">
-              <strong>Client Layer</strong>
-              <span>12–24 clients · Local CNN training · Up to 40% dropout</span>
-            </div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-branch">
-              <div class="pipeline-branch-col">
-                <span class="pipeline-branch-label">3-Level</span>
-                <span>12 Clients → 4 Edge → 2 Intermediate → 1 Global</span>
-              </div>
-              <div class="pipeline-branch-col">
-                <span class="pipeline-branch-label">4-Level</span>
-                <span>24 Clients → 8 Edge → 4 Intermediate → 2 → 1 Global</span>
-              </div>
-            </div>
-            <p class="pipeline-note">Aggregation at each server layer: FedAvg · FedProx · FedNova · Hybrid</p>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">
-              <strong>Global CNN Model</strong>
-              <span>Updated every round · 20 rounds</span>
-            </div>
-            <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step pipeline-step-end">
-              <strong>Performance Evaluation</strong>
-              <span>Accuracy · Drop magnitude · Recovery round · Recovery rate</span>
-            </div>
+          <div class="work-links">
+            <a href="projects/federated-learning.html" class="work-link">Explore Project →</a>
+            <a href="https://github.com/sonakshig2720/Hierarchical_Federated_Learning" target="_blank" rel="noopener" class="work-link work-link-secondary">GitHub →</a>
           </div>
         </div>
       </article>
@@ -214,16 +162,15 @@
             through a Streamlit dashboard.
           </p>
           <p class="work-contribution"><span>Key contribution</span> Built as part of a 4-person team — owned the Kafka setup, Flink processing logic and Streamlit interface.</p>
+        </div>
+        <div class="work-side">
           <div class="work-tags">
             <span>Kafka</span><span>Flink</span><span>Streamlit</span><span>Real-Time Data Engineering</span>
           </div>
-          <a href="projects/traffic-monitoring.html" class="work-link">Explore Project →</a>
-          <a href="https://github.com/sonakshig2720/Real-time-Traffic-Monitoring" target="_blank" rel="noopener" class="work-link work-link-secondary">GitHub →</a>
-        </div>
-        <div class="work-visual">
-          <video class="work-video" controls playsinline preload="metadata">
-            <source src="assets/videos/traffic-monitoring-demo.mp4" type="video/mp4">
-          </video>
+          <div class="work-links">
+            <a href="projects/traffic-monitoring.html" class="work-link">Explore Project →</a>
+            <a href="https://github.com/sonakshig2720/Real-time-Traffic-Monitoring" target="_blank" rel="noopener" class="work-link work-link-secondary">GitHub →</a>
+          </div>
         </div>
       </article>
 
