@@ -901,6 +901,7 @@ a.archive-row:hover { background: var(--surface); }
 .visual-placeholder-page { max-width: 480px; margin-bottom: 16px; }
 .visual-caption { color: var(--text-faint); font-size: 0.88rem; font-style: italic; }
 .project-links-empty { color: var(--text-faint); font-size: 0.94rem; font-style: italic; }
+.project-links-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* ============ SCROLL REVEAL ============ */
 .reveal {

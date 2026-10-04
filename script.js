@@ -24,7 +24,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 // ===== Active nav link on scroll =====
-const sections = ['home', 'work', 'research', 'experience', 'about', 'contact']
+const sections = ['home', 'work', 'hackathons', 'research', 'experience', 'about', 'contact']
   .map(id => document.getElementById(id))
   .filter(Boolean);
 const navAnchors = document.querySelectorAll('.nav-link');

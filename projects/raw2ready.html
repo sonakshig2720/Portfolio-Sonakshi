@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raw2Ready — Sonakshi Godavarthy</title>
+<meta name="description" content="An AI-based business intelligence website that turns a raw idea into a pitch-ready business model, competitor analysis, presentation and video — built at the Cursor AI Hackathon, Hamburg.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container">
+    <a href="../index.html#home" class="nav-logo">Sonakshi<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#home" class="nav-link">Home</a></li>
+      <li><a href="../index.html#work" class="nav-link">Work</a></li>
+      <li><a href="../index.html#hackathons" class="nav-link">Hackathons</a></li>
+      <li><a href="../index.html#research" class="nav-link">Research</a></li>
+      <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+      <li><a href="../index.html#about" class="nav-link">About</a></li>
+      <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      <li class="nav-cv"><a href="../assets/Sonakshi_Godavarthy_CV.pdf" download class="btn btn-small btn-primary">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="section project-page">
+  <div class="container">
+    <a href="../index.html#hackathons" class="back-link">← Back to Hackathons</a>
+
+    <p class="section-kicker">01 — Hackathons</p>
+    <h1 class="project-page-title">Raw2Ready</h1>
+    <p class="project-page-subtitle">Cursor AI Hackathon · Hamburg, Germany · Jan 31 – Feb 1, 2026</p>
+    <div class="project-page-tags">
+      <span>Cursor AI</span><span>FastAPI</span><span>React</span><span>OpenAI API</span><span>Gemini API</span><span>python-pptx</span>
+    </div>
+
+    <div class="project-metrics-row">
+      <div class="metric"><span class="metric-num">48h</span><span class="metric-label">Hackathon build time</span></div>
+      <div class="metric"><span class="metric-num">4</span><span class="metric-label">Person team</span></div>
+    </div>
+
+    <div class="project-page-body">
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>Built at the <a href="https://hackathonhub.eu/events/cursor-ai-hackathon-hamburg-hamburg-2026" target="_blank" rel="noopener">Cursor AI Hackathon</a> in Hamburg, Raw2Ready is an AI-based business intelligence website that turns a rough business idea into pitch-ready assets — a business model breakdown, competitor analysis, a timeline, a pitch presentation and a portfolio video — coded almost entirely inside Cursor over a 48-hour sprint with a 4-person team.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Problem</h2>
+        <p>Having a rough idea is easy; making it legible to an investor isn't. It's hard to visualize an early idea, and the information that does exist usually ends up scattered across a long ChatGPT conversation. Turning that into something pitch-ready still means separately producing a polished presentation and a video — a slow, manual step most early founders skip or outsource.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Approach</h2>
+        <p>Raw2Ready takes a raw idea — name, location, budget, industry and a free-text description — and runs it through a pipeline that produces a business model, a competitor analysis, a timeline, a pitch presentation and a portfolio video, one stage feeding the next. The backend lets the user pick between two LLM providers per request and returns structured output (competitors, market estimates, target demographics, service extensions) that drives both the on-screen results and the generated deck.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>System / Architecture</h2>
+        <div class="pipeline-diagram pipeline-diagram-wide">
+          <div class="pipeline-step">
+            <strong>React + Vite Frontend</strong>
+            <span>Idea input form · model selection · results view</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <strong>FastAPI Backend</strong>
+            <span>/api/analyze · /api/models · request validation (Pydantic)</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-branch">
+            <div class="pipeline-branch-col">
+              <span class="pipeline-branch-label">OpenAI</span>
+              <span>GPT-5.2</span>
+            </div>
+            <div class="pipeline-branch-col">
+              <span class="pipeline-branch-label">Google</span>
+              <span>Gemini 2.5 Flash (REST via httpx)</span>
+            </div>
+          </div>
+          <p class="pipeline-note">User-selected provider generates structured business analysis</p>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <strong>Business Model &amp; Market Pipeline</strong>
+            <span>Business model · competitors · market estimate · target demographics · timeline</span>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-branch">
+            <div class="pipeline-branch-col">
+              <span class="pipeline-branch-label">Pitch Deck</span>
+              <span>Auto-built with python-pptx</span>
+            </div>
+            <div class="pipeline-branch-col">
+              <span class="pipeline-branch-label">Portfolio Video</span>
+              <span>AI-generated video summary (MiniMax API)</span>
+            </div>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step pipeline-step-end">
+            <strong>Pitch-Ready Output</strong>
+            <span>Business model · competitors · timeline · presentation · video</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>My Contribution</h2>
+        <p>This was built as part of a 4-person team over a 2-day hackathon. My contributions:</p>
+        <ul class="project-list">
+          <li>Built the FastAPI backend that receives the raw idea and routes it to the selected LLM provider.</li>
+          <li>Integrated both OpenAI (GPT-5.2) and Google Gemini (2.5 Flash) behind a single analysis endpoint, including the REST fallback used when the official Gemini SDK proved unstable.</li>
+          <li>Designed the prompts that turn unstructured idea input into the structured JSON (competitors, market estimate, target demographics, service extensions) consumed by the frontend and the deck builder.</li>
+          <li>Implemented the AI video generation stage, calling the MiniMax video API to produce the portfolio video from the generated business analysis.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Technologies</h2>
+        <div class="project-page-tags">
+          <span>Cursor AI</span><span>Python</span><span>FastAPI</span><span>Pydantic</span><span>OpenAI API</span><span>Google Gemini API</span><span>MiniMax API</span><span>React</span><span>Vite</span><span>React Router</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Results</h2>
+        <p>Shipped a working end-to-end prototype within the 48-hour window — from raw idea input to generated competitor and market analysis, an auto-built pitch deck, and an AI-generated portfolio video. The team didn't place, but came away with a functioning full-stack AI product and a lot learned about building fast, in Cursor, under hackathon time pressure.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Challenges / Learnings</h2>
+        <ul class="project-list">
+          <li>Coordinating a 4-person team to design and integrate a full-stack app in 48 hours.</li>
+          <li>Normalizing responses from two different LLM providers (OpenAI and Gemini) behind one API so the frontend didn't need to care which model ran.</li>
+          <li>Working around instability in the official Gemini SDK by falling back to direct REST calls over httpx.</li>
+          <li>Programmatically generating a coherent pitch deck from LLM output using python-pptx.</li>
+          <li>Getting AI video generation working reliably under tight hackathon time constraints.</li>
+          <li>First experience building a product almost entirely inside Cursor, pair-programming with AI across the whole stack.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Links</h2>
+        <div class="project-links-row">
+          <a href="https://github.com/rishitank1805/cursor-ai-hackathon-raw2ready" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
+          <a href="https://hackathonhub.eu/events/cursor-ai-hackathon-hamburg-hamburg-2026" target="_blank" rel="noopener" class="btn btn-ghost">Hackathon Event →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">Sonakshi Godavarthy</p>
+      <p class="footer-tagline">AI &amp; Machine Learning Engineer</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/sonakshig2720" target="_blank" rel="noopener">GitHub</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/sonakshi-godavarthy-0685181b6/" target="_blank" rel="noopener">LinkedIn</a>
+      <span>·</span>
+      <a href="mailto:godavarthysonakshi@gmail.com">Email</a>
+    </div>
+    <p class="footer-year">© <span id="year"></span></p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
