@@ -153,12 +153,10 @@
       <div class="project-section">
         <h2>Challenges / Learnings</h2>
         <ul class="project-list">
-          <li>Went through several full reframes in 48 hours — from "interview the idea" to "challenge the premise" to "resequence around company context" — before landing on the buildable core.</li>
-          <li>Stripping PII before any model call and restoring it only where needed, with a local regex fallback when the Anymize API wasn't configured.</li>
+          <li>Went through several full reframes in 48 hours before landing on the buildable core.</li>
           <li>Designing an evidence gate that fails closed — forcing an explicit INVESTIGATE state instead of letting the model bluff past thin evidence.</li>
-          <li>Keeping the Gemini-generated clarification questions minimal — asking only what would actually change the decision, not everything that was missing.</li>
-          <li>Coordinating a 5-person team spanning process, product, security and data backgrounds so each perspective reshaped the product rather than just the UI copy.</li>
-          <li>Used AI throughout the process itself, not just in the product — Claude/GPT as thinking partners to pressure-test the concept, Gemini for meeting transcription and action items, and AI coding tools during implementation.</li>
+          <li>Stripping PII before any model call, with a local fallback when the Anymize API wasn't configured.</li>
+          <li>Coordinating a 5-person team spanning process, product, security and data backgrounds.</li>
         </ul>
       </div>
 
